@@ -1,0 +1,16 @@
+<div>
+  <strong>Кличка:</strong>
+  <%= @animal.name %>
+</div>
+
+<div>
+  <strong>Животное:</strong>
+  <%= @animal.animal_type %>
+</div>
+<div>
+  <strong>Photo:</strong>
+  <%= image_tag(@animal.avatar) if @animal.avatar.attached? %>
+</div>
+<%= button_tag(:type => 'button', class: 'btn-bg') do %>
+  <% link_to "Главная", animals_path %>
+<% end %>

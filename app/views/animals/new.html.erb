@@ -1,0 +1,23 @@
+<%= form_with scope: :animal, url: animals_path, local: true do |form| %>
+  <div class="add-form">
+  <h1>Додати друга</h1>
+  <p>
+    <%= form.label :Кличка %><br>
+    <%= form.text_field :name, class: 'textbox' %>
+  </p>
+
+  <p>
+    <%= form.label :Тварина %><br>
+    <%= form.select :animal_type, options_for_select([%w(Dog dog), %w(Cat cat)]), {}, {class: 'textbox'} %>
+  </p>
+
+  <div>
+    <%= form.label :Фото %><br>
+    <%= form.file_field :avatar, class: "btn-bg"%>
+  </div>
+    <div style="text-align:center">
+      <%= form.submit class: "btn-save" %>
+    </div>
+
+  </div>
+<% end %>

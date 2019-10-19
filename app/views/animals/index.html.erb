@@ -1,0 +1,22 @@
+
+<div class="container">
+
+  <h1>Список питомцев</h1>
+  <div style="text-align:center">
+    <%= button_tag(:type => 'button', class: 'btn-bg') do %>
+    <% link_to "Добавить животное", new_animal_path %>
+  <% end %>
+  </div>
+  <div id="gallery">
+    <% @animals.each do |animal| %>
+    <figure class="photo">
+      <%= link_to image_tag(animal.avatar, :class => "photo-img"), animal_path(animal), class: 'photo-a' %>
+      <figcaption><%= animal.name %></figcaption>
+      <figcaption><%= animal.animal_type %></figcaption>
+      <figcaption><%= link_to 'Destroy', animal_path(animal),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' } %></figcaption>
+    </figure>
+    <% end %>
+  </div>
+</div>

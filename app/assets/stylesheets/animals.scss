@@ -1,0 +1,122 @@
+// Place all the styles related to the Animals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #cccccc;
+  text-align: center;
+  margin: 30px 0;
+}
+.btn-bg {
+  background-color: #cccccc;
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn-save {
+  background-color: darkorange;
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.container {
+  width: 100%; /* ширина блока-контейнера */
+  max-width: 960px; /* максимальная ширина контейнера */
+  margin: 0 auto; /* этот стиль центрирует контейнер */
+}
+.photo {
+  float: left; /* говорим элементам выстраиваться один за другим */
+  width: 33.333333%; /* устанавливаем ширину элемента */
+  padding: 10px; /* добавляем отступы с каждой стороны */
+  box-sizing: border-box; /* меняем способ вычисления ширины */
+}
+.photo-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 10px solid #eee;
+  box-sizing: border-box;
+}
+.photo-a:hover {
+  opacity: 0.5;
+}
+
+.photo-a {
+  display: block;
+  position: relative;
+}
+.photo-a:after {
+  content: '';
+  background: transparent url(/app/assets/images/eye-icon.png) no-repeat center;
+  width: 52px;
+  height: 35px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+}
+.photo:hover > photo-a:after {
+  visibility: visible;
+}
+.photo figcaption {
+  font-family: 'Open Sans', sans-serif;
+  color: #999999;
+  text-align: center;
+  margin-top: 20px;
+}
+#gallery {
+  margin-bottom: 50px;
+}
+#gallery:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+//////////////////////////////////
+.add-form{
+  margin:0 auto;
+  max-width:95%;
+  box-sizing:border-box;
+  padding:40px;
+  border-radius:5px;
+  background:RGBA(255,255,255,1);
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+.textbox{
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+  padding:10px;
+  margin-bottom:30px;
+}
+.message:focus,
+.textbox:focus {
+  outline: none;
+  border: rgba(24, 149, 215, 1) 2px solid;
+  color: rgba(24, 149, 215, 1);
+}
